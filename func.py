@@ -11,12 +11,7 @@ def arguments():
     # parse the arguments in args variable 
     args = parser.parse_args()
 
+    #checks if user has specified the file or not
+    if not args.file:
+        print("[+] Please specify a file name")
     return args
-
-# all the arguments comes in options variable
-options = arguments()
-file = options.file
-optional_input = options.input
-
-print(file)
-print(optional_input)
