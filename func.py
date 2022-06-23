@@ -5,8 +5,8 @@ import argparse
 def arguments():
     parser = argparse.ArgumentParser()
     # arguments
-    parser.add_argument('-f', dest="file", help="file name")
-    parser.add_argument('-i', dest="input",help="optional argument with file")
+    parser.add_argument('-f', dest="file", type=str, help="file name")
+    parser.add_argument('-i', dest="input", help="optional argument with file")
 
     # parse the arguments in args variable 
     args = parser.parse_args()
