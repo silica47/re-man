@@ -1,13 +1,18 @@
 import func
+import pyfiglet
 
 def main():
     # all the arguments comes in options variable
     options = func.arguments()
-    file = options.file
+    binary = options.binary
     optional_input = options.input
 
-    print(file)
-    # print(optional_input)
+    # making directory
+    func.makedir(binary)
+
+    #cat command
+    func.cat(binary)    
 
 if __name__ == "__main__":
+    # print(pyfiglet.figlet_format("RE Man", font = "slant"))
     main()
