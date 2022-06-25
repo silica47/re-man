@@ -20,6 +20,13 @@ def main():
     func.files(binary)
 
     # ldd
+    func.ldd(binary)
+
+    #nm
+    func.nm(binary)
+
+    #readelf
+    func.readelf(binary)
 
 if __name__ == "__main__":
     # print(pyfiglet.figlet_format("RE Man", font = "slant"))

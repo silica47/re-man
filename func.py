@@ -66,3 +66,11 @@ def nm(binary):
     src_path = "nm"
     dst_path = f'./output/{binary}'
     shutil.move(src_path, dst_path)
+
+def readelf(binary):
+    with open("readelf", "w") as f:
+        subprocess.run(['readelf', '-h', binary], stdout=f, text=True)
+
+    src_path = "readelf"
+    dst_path = f'./output/{binary}'
+    shutil.move(src_path, dst_path)
