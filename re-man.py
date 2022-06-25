@@ -1,5 +1,5 @@
 import func
-import pyfiglet
+# import pyfiglet
 
 def main():
     # all the arguments comes in options variable
@@ -11,8 +11,12 @@ def main():
     func.makedir(binary)
 
     #cat command
-    func.cat(binary)    
+    func.cat(binary)
+    print("Something Went Wrong")
 
 if __name__ == "__main__":
     # print(pyfiglet.figlet_format("RE Man", font = "slant"))
-    main()
+    try:
+        main()
+    except Exception as e:
+        print(f'Error: {e}')
