@@ -12,7 +12,14 @@ def main():
 
     #cat command
     func.cat(binary)
-    print("Something Went Wrong")
+
+    # strings command
+    func.strings(binary)
+
+    # file command
+    func.files(binary)
+
+    # ldd
 
 if __name__ == "__main__":
     # print(pyfiglet.figlet_format("RE Man", font = "slant"))

@@ -35,6 +35,34 @@ def cat(binary):
     dst_path = f'./output/{binary}'
     shutil.move(src_path, dst_path)
    
+def strings(binary):
+    with open("strings", "w") as f:
+        subprocess.run(['strings', binary], stdout=f, text=True)
 
-# a = subprocess.run(['cat', 're-man.py'], capture_output=True, text=True)
-# print(a.stdout)
+    src_path = "strings"
+    dst_path = f'./output/{binary}'
+    shutil.move(src_path, dst_path)
+
+def files(binary):
+    with open("file", "w") as f:
+        subprocess.run(['file', binary], stdout=f, text=True)
+
+    src_path = "file"
+    dst_path = f'./output/{binary}'
+    shutil.move(src_path, dst_path)
+
+def ldd(binary):
+    with open("ldd", "w") as f:
+        subprocess.run(['ldd', binary], stdout=f, text=True)
+
+    src_path = "ldd"
+    dst_path = f'./output/{binary}'
+    shutil.move(src_path, dst_path)
+
+def nm(binary):
+    with open("nm", "w") as f:
+        subprocess.run(['nm', binary], stdout=f, text=True)
+
+    src_path = "nm"
+    dst_path = f'./output/{binary}'
+    shutil.move(src_path, dst_path)
