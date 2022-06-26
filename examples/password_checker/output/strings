@@ -1,7 +1,8 @@
 /lib64/ld-linux-x86-64.so.2
-GFn0
-printf
+exit
+puts
 __cxa_finalize
+strcmp
 __libc_start_main
 libc.so.6
 GLIBC_2.2.5
@@ -9,8 +10,11 @@ _ITM_deregisterTMCloneTable
 __gmon_start__
 _ITM_registerTMCloneTable
 u/UH
+dorif
 []A\A]A^A_
-Hello, World!
+usage: ./password_checker <password>
+correct password
+wrong password
 ;*3$"
 GCC: (Debian 10.2.1-6) 10.2.1 20210110
 crtstuff.c
@@ -20,7 +24,7 @@ completed.0
 __do_global_dtors_aux_fini_array_entry
 frame_dummy
 __frame_dummy_init_array_entry
-hello_world.c
+password_checker.c
 __FRAME_END__
 __init_array_end
 _DYNAMIC
@@ -29,16 +33,18 @@ __GNU_EH_FRAME_HDR
 _GLOBAL_OFFSET_TABLE_
 __libc_csu_fini
 _ITM_deregisterTMCloneTable
+puts@GLIBC_2.2.5
 _edata
-printf@GLIBC_2.2.5
 __libc_start_main@GLIBC_2.2.5
 __data_start
+strcmp@GLIBC_2.2.5
 __gmon_start__
 __dso_handle
 _IO_stdin_used
 __libc_csu_init
 __bss_start
 main
+exit@GLIBC_2.2.5
 __TMC_END__
 _ITM_registerTMCloneTable
 __cxa_finalize@GLIBC_2.2.5

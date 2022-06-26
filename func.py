@@ -74,3 +74,30 @@ def readelf(binary):
     src_path = "readelf"
     dst_path = f'./output/{binary}'
     shutil.move(src_path, dst_path)
+
+def ltrace(binary, options):
+
+    if not options:
+        with open("ltrace", "w") as f:
+            subprocess.run(['ltrace', f'./{binary}'], stderr=f, stdout=subprocess.DEVNULL, text=True)
+    else:
+        with open("ltrace", "w") as f:
+            subprocess.run(['ltrace', f'./{binary}', options], stderr=f, stdout=subprocess.DEVNULL, text=True)
+
+    src_path = "ltrace"
+    dst_path = f'./output/{binary}'
+    shutil.move(src_path, dst_path)
+
+def strace(binary, options):
+
+    if not options:
+        with open("strace", "w") as f:
+            subprocess.run(['strace', f'./{binary}'], stdout=subprocess.DEVNULL, stderr=f)
+
+    else:
+        with open("strace", "w") as f:
+            subprocess.run(['strace', f'./{binary}', options], stdout=subprocess.DEVNULL, stderr=f)
+
+    src_path = "strace"
+    dst_path = f'./output/{binary}'
+    shutil.move(src_path, dst_path)

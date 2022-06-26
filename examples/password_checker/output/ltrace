@@ -1,0 +1,3 @@
+strcmp("dorime", "1234")                         = 51
+puts("wrong password")                           = 15
++++ exited (status 0) +++

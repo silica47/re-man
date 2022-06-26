@@ -28,6 +28,12 @@ def main():
     #readelf
     func.readelf(binary)
 
+    #ltrace
+    func.ltrace(binary, optional_input)
+
+    #strace
+    func.strace(binary, optional_input)
+
 if __name__ == "__main__":
     # print(pyfiglet.figlet_format("RE Man", font = "slant"))
     try:

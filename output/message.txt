@@ -1,1 +1,0 @@
-All of your results are stored here in output directory.
